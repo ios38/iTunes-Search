@@ -1,6 +1,9 @@
 #import "SceneDelegate.h"
+#import "AppStartManager.h"
 
 @interface SceneDelegate ()
+
+@property (strong,nonatomic) AppStartManager *appStartManager;
 
 @end
 
@@ -8,6 +11,14 @@
 
 
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
+    
+    if (self.window == nil && [scene isKindOfClass:[UIWindowScene class]]) {
+        self.window = [[UIWindow alloc] initWithWindowScene:(UIWindowScene *)scene];
+    }
+    
+    self.appStartManager = [[AppStartManager alloc] initWithWindow:self.window];
+    [self.appStartManager start];
+        
     // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
     // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).

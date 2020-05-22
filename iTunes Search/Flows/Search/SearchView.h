@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  SearchView.h
 //  iTunes Search
 //
 //  Created by Maksim Romanov on 22.05.2020.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface SearchView : UIView
 
 @end
 
+NS_ASSUME_NONNULL_END
