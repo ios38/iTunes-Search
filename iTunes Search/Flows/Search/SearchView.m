@@ -10,9 +10,6 @@
 
 @interface SearchView ()
 
-@property (strong, nonatomic) UITableView *tableView;
-@property (strong, nonatomic) UISearchBar *searchBar;
-
 @end
 
 @implementation SearchView
