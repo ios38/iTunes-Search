@@ -24,13 +24,11 @@
 
 - (void)configureUI {
     
-    UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 95, self.bounds.size.width, 40)];
-    searchBar.placeholder = @"type here";
-    [self addSubview:searchBar];
+    self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 95, self.bounds.size.width, 40)];
+    self.searchBar.placeholder = @"type here";
+    [self addSubview:self.searchBar];
     
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 140, self.bounds.size.width, self.bounds.size.height - 180)];
-    //self.tableView.dataSource = self;
-    //self.tableView.delegate = self;
     [self addSubview:self.tableView];
     
 }

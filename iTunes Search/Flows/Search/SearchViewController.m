@@ -14,6 +14,7 @@
 @interface SearchViewController ()
 
 @property (strong,nonatomic) ITunesSearchService *searchService;
+@property (strong,nonatomic) NSArray *searchResults;
 
 @end
 
@@ -24,6 +25,7 @@
     self = [super init];
     if (self) {
         self.searchService = [[ITunesSearchService alloc] init];
+        self.searchResults = [NSArray new];
     }
     return self;
 }
@@ -32,35 +34,25 @@
     [super viewDidLoad];
     self.searchView = [[SearchView alloc] initWithFrame:self.view.frame];
     self.view = self.searchView;
-    self.searchView.searchBar.delegate = self;
     self.searchView.tableView.delegate = self;
     self.searchView.tableView.dataSource = self;
-    [self getApps];
-}
-
-- (void)getApps {
-    [self.searchService getAppsWithQuery:@"telegram"
-    onSuccess:^(NSArray * _Nonnull iTunesApps) {
-        ITunesApp *app = iTunesApps.firstObject;
-        NSLog(@"app: %@, rating: %@", app.appName, app.averageRating);
-    }
-    onFailure:^(NSError * _Nonnull error) {
-        NSLog(@"error: %@", [error localizedDescription]);
-    }];
+    self.searchView.searchBar.delegate = self;
 }
 
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return [self.searchResults count];
 }
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"Cell"];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"Cell %ld",(long)indexPath.row ];
+    ITunesApp *app = [self.searchResults objectAtIndex:indexPath.row];
+    cell.textLabel.text = app.appName;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%.2f", app.averageRating.doubleValue];
     return cell;
 }
 
@@ -74,15 +66,19 @@
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
     if ([searchText  isEqual: @""]) {
-        
+        self.searchResults = @[];
+        [self.searchView.tableView reloadData];
+
     } else {
-        
+        [self.searchService getAppsWithQuery:searchText
+        onSuccess:^(NSArray * _Nonnull iTunesApps) {
+            self.searchResults = iTunesApps;
+            [self.searchView.tableView reloadData];
+        }
+        onFailure:^(NSError * _Nonnull error) {
+            NSLog(@"error: %@", [error localizedDescription]);
+        }];
     }
-}
-
-- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
-    NSLog(@"SearchBar.text: %@", self.searchView.searchBar.text);
-
 }
 
 @end

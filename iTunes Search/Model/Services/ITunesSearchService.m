@@ -60,8 +60,6 @@
         }
 
     } failure:^(NSURLSessionDataTask * task, NSError * error) {
-        NSLog(@"https://opentdb.com/api.php Failure");
-        //NSLog(@"error: %@", [error localizedDescription]);
         if (failure) {
             failure(error);
         }

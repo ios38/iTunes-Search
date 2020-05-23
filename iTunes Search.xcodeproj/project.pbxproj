@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		503BA0F22478FBA100BDD380 /* ITunesSearchService.m in Sources */ = {isa = PBXBuildFile; fileRef = 503BA0F12478FBA100BDD380 /* ITunesSearchService.m */; };
-		503BA0F82479207400BDD380 /* iTunesApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 503BA0F72479207400BDD380 /* iTunesApp.m */; };
+		503BA0FB247920ED00BDD380 /* iTunesApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 503BA0F9247920ED00BDD380 /* iTunesApp.m */; };
 		50BD3E082477E73F000251EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BD3E072477E73F000251EA /* AppDelegate.m */; };
 		50BD3E0B2477E73F000251EA /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BD3E0A2477E73F000251EA /* SceneDelegate.m */; };
 		50BD3E0E2477E73F000251EA /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BD3E0D2477E73F000251EA /* SearchViewController.m */; };
@@ -25,8 +25,8 @@
 		27FEF72BD5312E15A8A6D441 /* Pods_iTunes_Search.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunes_Search.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		503BA0F02478FBA100BDD380 /* ITunesSearchService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITunesSearchService.h; sourceTree = "<group>"; };
 		503BA0F12478FBA100BDD380 /* ITunesSearchService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITunesSearchService.m; sourceTree = "<group>"; };
-		503BA0F62479207400BDD380 /* ITunesApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITunesApp.h; sourceTree = "<group>"; };
-		503BA0F72479207400BDD380 /* iTunesApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iTunesApp.m; sourceTree = "<group>"; };
+		503BA0F9247920ED00BDD380 /* iTunesApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iTunesApp.m; sourceTree = "<group>"; };
+		503BA0FA247920ED00BDD380 /* ITunesApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITunesApp.h; sourceTree = "<group>"; };
 		50BD3E032477E73F000251EA /* iTunes Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iTunes Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50BD3E062477E73F000251EA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		50BD3E072477E73F000251EA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -79,8 +79,8 @@
 		503BA0EC2478CF0300BDD380 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				503BA0F62479207400BDD380 /* ITunesApp.h */,
-				503BA0F72479207400BDD380 /* iTunesApp.m */,
+				503BA0FA247920ED00BDD380 /* ITunesApp.h */,
+				503BA0F9247920ED00BDD380 /* iTunesApp.m */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -293,7 +293,7 @@
 				50BD3E0B2477E73F000251EA /* SceneDelegate.m in Sources */,
 				50BD3E212477EA66000251EA /* AppStartManager.m in Sources */,
 				503BA0F22478FBA100BDD380 /* ITunesSearchService.m in Sources */,
-				503BA0F82479207400BDD380 /* iTunesApp.m in Sources */,
+				503BA0FB247920ED00BDD380 /* iTunesApp.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
