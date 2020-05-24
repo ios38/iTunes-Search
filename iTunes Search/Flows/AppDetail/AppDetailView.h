@@ -12,8 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AppDetailView : UIView
 
-@property (strong, nonatomic) UIImageView *imageView;
-@property (strong, nonatomic) UILabel *imageUrlLabel;
+@property (strong, nonatomic) UIImageView *appIconImageView;
+@property (strong, nonatomic) UILabel *appNameLabel;
 
 @end
 

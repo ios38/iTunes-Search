@@ -20,14 +20,14 @@
 
 - (void)configureUI {
     
-    self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 95, 100, 100)];
-    self.imageView.backgroundColor = [UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:0.5];
-    self.imageView.layer.cornerRadius = 10;
-    self.imageView.layer.masksToBounds = YES;
-    [self addSubview:self.imageView];
+    self.appIconImageView = [[UIImageView alloc] initWithFrame:CGRectMake(20, 110, 100, 100)];
+    self.appIconImageView.backgroundColor = [UIColor colorWithRed:0.1 green:0.1 blue:0.1 alpha:1];
+    self.appIconImageView.layer.cornerRadius = 10;
+    self.appIconImageView.layer.masksToBounds = YES;
+    [self addSubview:self.appIconImageView];
     
-    self.imageUrlLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 200, self.bounds.size.width - 20, 40)];
-    [self addSubview:self.imageUrlLabel];
+    self.appNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(140, 110, self.bounds.size.width - 160, 40)];
+    [self addSubview:self.appNameLabel];
         
 }
 
