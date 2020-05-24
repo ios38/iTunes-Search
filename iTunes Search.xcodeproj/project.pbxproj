@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		503BA0F22478FBA100BDD380 /* ITunesSearchService.m in Sources */ = {isa = PBXBuildFile; fileRef = 503BA0F12478FBA100BDD380 /* ITunesSearchService.m */; };
 		503BA0FB247920ED00BDD380 /* iTunesApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 503BA0F9247920ED00BDD380 /* iTunesApp.m */; };
+		503BA0FF2479593A00BDD380 /* AppDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 503BA0FE2479593A00BDD380 /* AppDetailView.m */; };
+		503BA10224795C9700BDD380 /* ImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 503BA10124795C9700BDD380 /* ImageDownloader.m */; };
+		503BA105247A546800BDD380 /* AppDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 503BA104247A546800BDD380 /* AppDetailViewController.m */; };
 		50BD3E082477E73F000251EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BD3E072477E73F000251EA /* AppDelegate.m */; };
 		50BD3E0B2477E73F000251EA /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BD3E0A2477E73F000251EA /* SceneDelegate.m */; };
 		50BD3E0E2477E73F000251EA /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BD3E0D2477E73F000251EA /* SearchViewController.m */; };
@@ -27,6 +30,12 @@
 		503BA0F12478FBA100BDD380 /* ITunesSearchService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITunesSearchService.m; sourceTree = "<group>"; };
 		503BA0F9247920ED00BDD380 /* iTunesApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iTunesApp.m; sourceTree = "<group>"; };
 		503BA0FA247920ED00BDD380 /* ITunesApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITunesApp.h; sourceTree = "<group>"; };
+		503BA0FD2479593A00BDD380 /* AppDetailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDetailView.h; sourceTree = "<group>"; };
+		503BA0FE2479593A00BDD380 /* AppDetailView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDetailView.m; sourceTree = "<group>"; };
+		503BA10024795C9700BDD380 /* ImageDownloader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageDownloader.h; sourceTree = "<group>"; };
+		503BA10124795C9700BDD380 /* ImageDownloader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageDownloader.m; sourceTree = "<group>"; };
+		503BA103247A546800BDD380 /* AppDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDetailViewController.h; sourceTree = "<group>"; };
+		503BA104247A546800BDD380 /* AppDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDetailViewController.m; sourceTree = "<group>"; };
 		50BD3E032477E73F000251EA /* iTunes Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iTunes Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50BD3E062477E73F000251EA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		50BD3E072477E73F000251EA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -72,6 +81,8 @@
 				50BD3E202477EA66000251EA /* AppStartManager.m */,
 				503BA0F02478FBA100BDD380 /* ITunesSearchService.h */,
 				503BA0F12478FBA100BDD380 /* ITunesSearchService.m */,
+				503BA10024795C9700BDD380 /* ImageDownloader.h */,
+				503BA10124795C9700BDD380 /* ImageDownloader.m */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -83,6 +94,17 @@
 				503BA0F9247920ED00BDD380 /* iTunesApp.m */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		503BA0FC247958F600BDD380 /* AppDetail */ = {
+			isa = PBXGroup;
+			children = (
+				503BA0FD2479593A00BDD380 /* AppDetailView.h */,
+				503BA0FE2479593A00BDD380 /* AppDetailView.m */,
+				503BA103247A546800BDD380 /* AppDetailViewController.h */,
+				503BA104247A546800BDD380 /* AppDetailViewController.m */,
+			);
+			path = AppDetail;
 			sourceTree = "<group>";
 		};
 		50BD3DFA2477E73F000251EA = {
@@ -122,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				50BD3E272477F449000251EA /* Search */,
+				503BA0FC247958F600BDD380 /* AppDetail */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -286,7 +309,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				503BA0FF2479593A00BDD380 /* AppDetailView.m in Sources */,
+				503BA105247A546800BDD380 /* AppDetailViewController.m in Sources */,
 				50BD3E242477F41B000251EA /* SearchView.m in Sources */,
+				503BA10224795C9700BDD380 /* ImageDownloader.m in Sources */,
 				50BD3E0E2477E73F000251EA /* SearchViewController.m in Sources */,
 				50BD3E082477E73F000251EA /* AppDelegate.m in Sources */,
 				50BD3E192477E740000251EA /* main.m in Sources */,

@@ -7,11 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SearchView.h"
 
 @interface SearchViewController : UIViewController <UITableViewDataSource,UITableViewDelegate,UISearchBarDelegate>
-
-@property (strong, nonatomic) SearchView *searchView;
 
 @end
 

@@ -10,9 +10,11 @@
 #import "SearchView.h"
 #import "ITunesSearchService.h"
 #import "ITunesApp.h"
+#import "AppDetailViewController.h"
 
 @interface SearchViewController ()
 
+@property (strong, nonatomic) SearchView *searchView;
 @property (strong,nonatomic) ITunesSearchService *searchService;
 @property (strong,nonatomic) NSArray *searchResults;
 
@@ -60,6 +62,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"didSelectRowAtIndexPath: %ld", (long)indexPath.row);
+    ITunesApp *app = [self.searchResults objectAtIndex:indexPath.row];
+    AppDetailViewController *appDetailViewController = [[AppDetailViewController alloc] initWithApp:app];
+    [self.navigationController pushViewController:appDetailViewController animated:YES];
 }
 
 #pragma mark - UISearchBarDelegate
