@@ -10,4 +10,13 @@
 
 @implementation ImageDownloader
 
++ (UIImage *)imageWithUrl:(NSString *)imageUrl {
+    NSData *imageData=[NSData dataWithContentsOfURL:[NSURL URLWithString:imageUrl]];
+    if (imageData) {
+        return [UIImage imageWithData:imageData];
+    } else {
+        return [UIImage systemImageNamed:@"questionmark.circle"];
+    }
+}
+
 @end

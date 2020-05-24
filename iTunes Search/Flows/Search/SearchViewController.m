@@ -11,6 +11,7 @@
 #import "ITunesSearchService.h"
 #import "ITunesApp.h"
 #import "AppDetailViewController.h"
+#import "AppCell.h"
 
 @interface SearchViewController ()
 
@@ -48,20 +49,21 @@
 }
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    AppCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AppCell"];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"Cell"];
+        cell = [[AppCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"AppCell"];
     }
     ITunesApp *app = [self.searchResults objectAtIndex:indexPath.row];
-    cell.textLabel.text = app.appName;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%.2f", app.averageRating.doubleValue];
+    [cell configureWithApp:app];
+    //cell.textLabel.text = app.appName;
+    //cell.detailTextLabel.text = [NSString stringWithFormat:@"%.2f", app.averageRating.doubleValue];
     return cell;
 }
 
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"didSelectRowAtIndexPath: %ld", (long)indexPath.row);
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     ITunesApp *app = [self.searchResults objectAtIndex:indexPath.row];
     AppDetailViewController *appDetailViewController = [[AppDetailViewController alloc] initWithApp:app];
     [self.navigationController pushViewController:appDetailViewController animated:YES];

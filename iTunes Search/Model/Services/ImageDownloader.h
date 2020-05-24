@@ -6,11 +6,13 @@
 //  Copyright © 2020 Maksim Romanov. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ImageDownloader : NSObject
+
++ (UIImage *)imageWithUrl:(NSString *)imageUrl;
 
 @end
 

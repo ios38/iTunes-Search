@@ -9,6 +9,7 @@
 #import "AppDetailViewController.h"
 #import "AppDetailView.h"
 #import "ITunesSearchService.h"
+#import "ImageDownloader.h"
 
 @interface AppDetailViewController ()
 
@@ -31,17 +32,9 @@
     [super viewDidLoad];
     self.appDetailView = [[AppDetailView alloc] initWithFrame:self.view.frame];
     self.view = self.appDetailView;
-    self.appDetailView.appIconImageView.image = [self imageWithUrl:self.app.iconUrl];
+    self.appDetailView.appIconImageView.image = [ImageDownloader imageWithUrl:self.app.iconUrl];
     self.appDetailView.appNameLabel.text = self.app.appName;
 }
 
-- (UIImage *)imageWithUrl:(NSString *)imageUrl {
-    NSData *imageData=[NSData dataWithContentsOfURL:[NSURL URLWithString:imageUrl]];
-    if (imageData) {
-        return [UIImage imageWithData:imageData];
-    } else {
-        return [UIImage systemImageNamed:@"questionmark.circle"];
-    }
-}
 
 @end

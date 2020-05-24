@@ -41,6 +41,7 @@
     NSDictionary* parameters = [NSDictionary dictionaryWithObjectsAndKeys:
                                 @"RU",@"country",
                                 @"software",@"media",
+                                @10,@"limit",
                                 query,@"term",
                                 nil];
 
