@@ -9,7 +9,8 @@
 #import "AppDetailViewController.h"
 #import "AppDetailView.h"
 #import "ITunesSearchService.h"
-#import "ImageDownloader.h"
+//#import "ImageDownloader.h"
+#import <SDWebImage/SDWebImage.h>
 
 @interface AppDetailViewController ()
 
@@ -32,7 +33,11 @@
     [super viewDidLoad];
     self.appDetailView = [[AppDetailView alloc] initWithFrame:self.view.frame];
     self.view = self.appDetailView;
-    self.appDetailView.appIconImageView.image = [ImageDownloader imageWithUrl:self.app.iconUrl];
+    
+    //self.appDetailView.appIconImageView.image = [ImageDownloader imageWithUrl:self.app.iconUrl];
+    [self.appDetailView.appIconImageView sd_setImageWithURL:[NSURL URLWithString:self.app.iconUrl]
+    placeholderImage:[UIImage systemImageNamed:@"questionmark.circle"]];
+
     self.appDetailView.appNameLabel.text = self.app.appName;
 }
 

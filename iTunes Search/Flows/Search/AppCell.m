@@ -7,7 +7,8 @@
 //
 
 #import "AppCell.h"
-#import "ImageDownloader.h"
+//#import "ImageDownloader.h"
+#import <SDWebImage/SDWebImage.h>
 
 @implementation AppCell
 
@@ -40,7 +41,9 @@
 }
 
 - (void)configureWithApp:(ITunesApp *)app {
-    self.appIconImageView.image = [ImageDownloader imageWithUrl:app.iconUrl];
+    //self.appIconImageView.image = [ImageDownloader imageWithUrl:app.iconUrl];
+    [self.appIconImageView sd_setImageWithURL:[NSURL URLWithString:app.iconUrl]
+    placeholderImage:[UIImage systemImageNamed:@"questionmark.circle"]];
     self.appNameLabel.text = app.appName;
     self.appRatingLabel.text = [NSString stringWithFormat:@"%.2f", app.averageRating.doubleValue];
 }

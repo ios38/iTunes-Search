@@ -8,6 +8,7 @@
 
 #import "AppStartManager.h"
 #import "SearchViewController.h"
+#import "SearchTableViewController.h"
 
 @implementation AppStartManager
 
@@ -20,7 +21,9 @@
 }
 
 - (void)start {
-    SearchViewController *vc = [[SearchViewController alloc] init];
+    //SearchViewController *vc = [[SearchViewController alloc] init];
+    SearchTableViewController *vc = [[SearchTableViewController alloc] init];
+
     vc.navigationItem.title = @"Search via iTunes";
     
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
