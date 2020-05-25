@@ -21,8 +21,8 @@
 }
 
 - (void)start {
-    //SearchViewController *vc = [[SearchViewController alloc] init];
-    SearchTableViewController *vc = [[SearchTableViewController alloc] init];
+    SearchViewController *vc = [[SearchViewController alloc] init];
+    //SearchTableViewController *vc = [[SearchTableViewController alloc] init];
 
     vc.navigationItem.title = @"Search via iTunes";
     
