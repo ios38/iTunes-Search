@@ -1,8 +1,8 @@
 //
-//  AppDetailView.h
+//  AppDetailHeaderView.h
 //  iTunes Search
 //
-//  Created by Maksim Romanov on 23.05.2020.
+//  Created by Maksim Romanov on 28.05.2020.
 //  Copyright © 2020 Maksim Romanov. All rights reserved.
 //
 
@@ -10,10 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AppDetailView : UIView
+@interface AppDetailHeaderView : UIView
 
 @property (strong, nonatomic) UIImageView *appIconImageView;
 @property (strong, nonatomic) UILabel *appNameLabel;
+@property (strong, nonatomic) UIButton *getAppButton;
 
 @end
 

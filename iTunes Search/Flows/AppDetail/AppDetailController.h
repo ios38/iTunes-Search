@@ -1,5 +1,5 @@
 //
-//  AppDetailViewController.h
+//  AppDetailController.h
 //  iTunes Search
 //
 //  Created by Maksim Romanov on 24.05.2020.
@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AppDetailViewController : UIViewController
+@interface AppDetailController : UIViewController
 
 - (instancetype)initWithApp:(ITunesApp *)app;
 

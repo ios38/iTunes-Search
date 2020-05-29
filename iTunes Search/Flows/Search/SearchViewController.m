@@ -10,7 +10,7 @@
 #import "SearchView.h"
 #import "ITunesSearchService.h"
 #import "ITunesApp.h"
-#import "AppDetailViewController.h"
+#import "AppDetailController.h"
 #import "AppCell.h"
 
 @interface SearchViewController ()
@@ -65,7 +65,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     ITunesApp *app = [self.searchResults objectAtIndex:indexPath.row];
-    AppDetailViewController *appDetailViewController = [[AppDetailViewController alloc] initWithApp:app];
+    AppDetailController *appDetailViewController = [[AppDetailController alloc] initWithApp:app];
     [self.navigationController pushViewController:appDetailViewController animated:YES];
 }
 
