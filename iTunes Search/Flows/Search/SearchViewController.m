@@ -55,8 +55,6 @@
     }
     ITunesApp *app = [self.searchResults objectAtIndex:indexPath.row];
     [cell configureWithApp:app];
-    //cell.textLabel.text = app.appName;
-    //cell.detailTextLabel.text = [NSString stringWithFormat:@"%.2f", app.averageRating.doubleValue];
     return cell;
 }
 

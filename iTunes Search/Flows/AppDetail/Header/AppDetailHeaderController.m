@@ -9,6 +9,8 @@
 #import "AppDetailHeaderController.h"
 #import "AppDetailHeaderView.h"
 #import <SDWebImage/SDWebImage.h>
+//#define MAS_SHORTHAND
+#import "Masonry.h"
 
 @interface AppDetailHeaderController ()
 
@@ -34,20 +36,23 @@
 - (void)loadView {
     [super loadView];
     //NSLog(@"loadView self.app: %@",self.app.appName);
-    self.appDetailHeaderView = [[AppDetailHeaderView alloc] initWithFrame:self.view.frame];
+    //self.appDetailHeaderView = [[AppDetailHeaderView alloc] initWithFrame:self.view.frame];
+    self.appDetailHeaderView = [[AppDetailHeaderView alloc] init];
     self.view = self.appDetailHeaderView;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //NSLog(@"viewDidLoad self.app: %@",self.app.appName);
+    
     [self.appDetailHeaderView.appIconImageView sd_setImageWithURL:[NSURL URLWithString:self.app.iconUrl] placeholderImage:[UIImage systemImageNamed:@"questionmark.circle"]];
     
     self.appDetailHeaderView.appNameLabel.text = self.app.appName;
+    self.appDetailHeaderView.appCompanyLabel.text = self.app.company;
+
     UITapGestureRecognizer *doubleTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(performBlock)];
-    [self.appDetailHeaderView.appNameLabel addGestureRecognizer:doubleTapGesture];
+    [self.view addGestureRecognizer:doubleTapGesture];
     doubleTapGesture.numberOfTapsRequired = 2;
-    self.appDetailHeaderView.appNameLabel.userInteractionEnabled = YES;
+    //self.appDetailHeaderView.appNameLabel.userInteractionEnabled = YES;
     
     [self.appDetailHeaderView.getAppButton addTarget:self action:@selector(performBlock) forControlEvents:UIControlEventTouchUpInside];
 }
