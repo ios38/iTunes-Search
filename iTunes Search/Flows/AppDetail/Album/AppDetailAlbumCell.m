@@ -14,9 +14,17 @@
 @implementation AppDetailAlbumCell
 
 - (void)layoutSubviews {
-    [self configureSubviews];
-    [self setupConstraints];
-    //NSLog(@"AppDetailAlbumCell created");
+    //NSLog(@"AppDetailAlbumCell layoutSubviews");
+}
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self configureSubviews];
+        [self setupConstraints];
+        //NSLog(@"AppDetailAlbumCell created");
+    }
+    return self;
 }
 
 - (void)configureSubviews {

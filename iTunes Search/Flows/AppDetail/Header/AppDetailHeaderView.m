@@ -7,7 +7,7 @@
 //
 
 #import "AppDetailHeaderView.h"
-//#define MAS_SHORTHAND
+#define MAS_SHORTHAND
 #import "Masonry.h"
 
 @implementation AppDetailHeaderView
@@ -38,6 +38,9 @@
     self.appCompanyLabel.textColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1];
     [self addSubview:self.appCompanyLabel];
 
+    self.progressView = UIProgressView.new;
+    [self addSubview:self.progressView];
+    
     self.getAppButton = [[UIButton alloc] init];
     [self.getAppButton setTitle:@"Get" forState:UIControlStateNormal];
     self.getAppButton.titleLabel.font = [UIFont systemFontOfSize:16 weight:UIFontWeightMedium];
@@ -58,10 +61,15 @@
         make.right.equalTo(self.mas_right);
     }];
     [self.appCompanyLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        //make.top.equalTo(self.appNameLabel.mas_bottom).width.offset(10);
-        make.top.equalTo(self.mas_top).with.offset(30);
+        make.top.equalTo(self.appNameLabel.mas_bottom).with.offset(10);
+        //make.top.equalTo(self.mas_top).with.offset(30);
         make.left.equalTo(self.appIconImageView.mas_right).with.offset(20);
         make.right.equalTo(self.mas_right);
+    }];
+    [self.progressView makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.appCompanyLabel.bottom).with.offset(10);
+        make.left.equalTo(self.appIconImageView.right).with.offset(20);
+        make.right.equalTo(self.right).with.inset(20);
     }];
     [self.getAppButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.appIconImageView.mas_right).with.offset(20);
