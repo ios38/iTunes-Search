@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5013BD64249A0ADC00B7F3F0 /* AppHeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5013BD63249A0ADC00B7F3F0 /* AppHeaderModel.m */; };
 		503BA0F22478FBA100BDD380 /* ITunesSearchService.m in Sources */ = {isa = PBXBuildFile; fileRef = 503BA0F12478FBA100BDD380 /* ITunesSearchService.m */; };
 		503BA0FB247920ED00BDD380 /* iTunesApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 503BA0F9247920ED00BDD380 /* iTunesApp.m */; };
-		503BA0FF2479593A00BDD380 /* AppDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 503BA0FE2479593A00BDD380 /* AppDetailView.m */; };
 		503BA10224795C9700BDD380 /* ImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 503BA10124795C9700BDD380 /* ImageDownloader.m */; };
-		503BA105247A546800BDD380 /* AppDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 503BA104247A546800BDD380 /* AppDetailViewController.m */; };
+		503BA105247A546800BDD380 /* AppDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 503BA104247A546800BDD380 /* AppDetailController.m */; };
+		506FD97824823A74007CC9C0 /* AppDetailAlbumController.m in Sources */ = {isa = PBXBuildFile; fileRef = 506FD97724823A74007CC9C0 /* AppDetailAlbumController.m */; };
+		506FD97B24823AA8007CC9C0 /* AppDetailAlbumView.m in Sources */ = {isa = PBXBuildFile; fileRef = 506FD97A24823AA8007CC9C0 /* AppDetailAlbumView.m */; };
+		506FD97E24825BE3007CC9C0 /* AppDetailAlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 506FD97D24825BE3007CC9C0 /* AppDetailAlbumCell.m */; };
 		50BD3E082477E73F000251EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BD3E072477E73F000251EA /* AppDelegate.m */; };
 		50BD3E0B2477E73F000251EA /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BD3E0A2477E73F000251EA /* SceneDelegate.m */; };
 		50BD3E0E2477E73F000251EA /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BD3E0D2477E73F000251EA /* SearchViewController.m */; };
@@ -21,23 +24,30 @@
 		50BD3E212477EA66000251EA /* AppStartManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BD3E202477EA66000251EA /* AppStartManager.m */; };
 		50BD3E242477F41B000251EA /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BD3E232477F41B000251EA /* SearchView.m */; };
 		50CE5D7D247A8785004DE8AB /* AppCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CE5D7C247A8785004DE8AB /* AppCell.m */; };
-		50CE5D80247BB2F0004DE8AB /* SearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CE5D7F247BB2F0004DE8AB /* SearchTableViewController.m */; };
+		50DC98D5247FDF8600F4D62D /* AppDetailHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DC98D4247FDF8600F4D62D /* AppDetailHeaderView.m */; };
+		50DC98D8247FDFB000F4D62D /* AppDetailHeaderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DC98D7247FDFB000F4D62D /* AppDetailHeaderController.m */; };
 		CDAD3514471DDFC206E2AFBE /* Pods_iTunes_Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27FEF72BD5312E15A8A6D441 /* Pods_iTunes_Search.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0D7DCD6CC43FA719573B108D /* Pods-iTunes Search.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunes Search.debug.xcconfig"; path = "Target Support Files/Pods-iTunes Search/Pods-iTunes Search.debug.xcconfig"; sourceTree = "<group>"; };
 		27FEF72BD5312E15A8A6D441 /* Pods_iTunes_Search.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunes_Search.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5013BD62249A0ADC00B7F3F0 /* AppHeaderModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppHeaderModel.h; sourceTree = "<group>"; };
+		5013BD63249A0ADC00B7F3F0 /* AppHeaderModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppHeaderModel.m; sourceTree = "<group>"; };
 		503BA0F02478FBA100BDD380 /* ITunesSearchService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITunesSearchService.h; sourceTree = "<group>"; };
 		503BA0F12478FBA100BDD380 /* ITunesSearchService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITunesSearchService.m; sourceTree = "<group>"; };
 		503BA0F9247920ED00BDD380 /* iTunesApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iTunesApp.m; sourceTree = "<group>"; };
 		503BA0FA247920ED00BDD380 /* ITunesApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITunesApp.h; sourceTree = "<group>"; };
-		503BA0FD2479593A00BDD380 /* AppDetailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDetailView.h; sourceTree = "<group>"; };
-		503BA0FE2479593A00BDD380 /* AppDetailView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDetailView.m; sourceTree = "<group>"; };
 		503BA10024795C9700BDD380 /* ImageDownloader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageDownloader.h; sourceTree = "<group>"; };
 		503BA10124795C9700BDD380 /* ImageDownloader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageDownloader.m; sourceTree = "<group>"; };
-		503BA103247A546800BDD380 /* AppDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDetailViewController.h; sourceTree = "<group>"; };
-		503BA104247A546800BDD380 /* AppDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDetailViewController.m; sourceTree = "<group>"; };
+		503BA103247A546800BDD380 /* AppDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDetailController.h; sourceTree = "<group>"; };
+		503BA104247A546800BDD380 /* AppDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDetailController.m; sourceTree = "<group>"; };
+		506FD97624823A74007CC9C0 /* AppDetailAlbumController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDetailAlbumController.h; sourceTree = "<group>"; };
+		506FD97724823A74007CC9C0 /* AppDetailAlbumController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDetailAlbumController.m; sourceTree = "<group>"; };
+		506FD97924823AA8007CC9C0 /* AppDetailAlbumView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDetailAlbumView.h; sourceTree = "<group>"; };
+		506FD97A24823AA8007CC9C0 /* AppDetailAlbumView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDetailAlbumView.m; sourceTree = "<group>"; };
+		506FD97C24825BE3007CC9C0 /* AppDetailAlbumCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDetailAlbumCell.h; sourceTree = "<group>"; };
+		506FD97D24825BE3007CC9C0 /* AppDetailAlbumCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDetailAlbumCell.m; sourceTree = "<group>"; };
 		50BD3E032477E73F000251EA /* iTunes Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iTunes Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50BD3E062477E73F000251EA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		50BD3E072477E73F000251EA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -55,8 +65,10 @@
 		50BD3E232477F41B000251EA /* SearchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchView.m; sourceTree = "<group>"; };
 		50CE5D7B247A8785004DE8AB /* AppCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppCell.h; sourceTree = "<group>"; };
 		50CE5D7C247A8785004DE8AB /* AppCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppCell.m; sourceTree = "<group>"; };
-		50CE5D7E247BB2F0004DE8AB /* SearchTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchTableViewController.h; sourceTree = "<group>"; };
-		50CE5D7F247BB2F0004DE8AB /* SearchTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewController.m; sourceTree = "<group>"; };
+		50DC98D3247FDF8600F4D62D /* AppDetailHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDetailHeaderView.h; sourceTree = "<group>"; };
+		50DC98D4247FDF8600F4D62D /* AppDetailHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDetailHeaderView.m; sourceTree = "<group>"; };
+		50DC98D6247FDFB000F4D62D /* AppDetailHeaderController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDetailHeaderController.h; sourceTree = "<group>"; };
+		50DC98D7247FDFB000F4D62D /* AppDetailHeaderController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDetailHeaderController.m; sourceTree = "<group>"; };
 		5C8A324302B7983925632D30 /* Pods-iTunes Search.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunes Search.release.xcconfig"; path = "Target Support Files/Pods-iTunes Search/Pods-iTunes Search.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,12 +117,25 @@
 		503BA0FC247958F600BDD380 /* AppDetail */ = {
 			isa = PBXGroup;
 			children = (
-				503BA0FD2479593A00BDD380 /* AppDetailView.h */,
-				503BA0FE2479593A00BDD380 /* AppDetailView.m */,
-				503BA103247A546800BDD380 /* AppDetailViewController.h */,
-				503BA104247A546800BDD380 /* AppDetailViewController.m */,
+				50DC98D2247FDF4600F4D62D /* Header */,
+				506FD97224823883007CC9C0 /* Album */,
+				503BA103247A546800BDD380 /* AppDetailController.h */,
+				503BA104247A546800BDD380 /* AppDetailController.m */,
 			);
 			path = AppDetail;
+			sourceTree = "<group>";
+		};
+		506FD97224823883007CC9C0 /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				506FD97C24825BE3007CC9C0 /* AppDetailAlbumCell.h */,
+				506FD97D24825BE3007CC9C0 /* AppDetailAlbumCell.m */,
+				506FD97924823AA8007CC9C0 /* AppDetailAlbumView.h */,
+				506FD97A24823AA8007CC9C0 /* AppDetailAlbumView.m */,
+				506FD97624823A74007CC9C0 /* AppDetailAlbumController.h */,
+				506FD97724823A74007CC9C0 /* AppDetailAlbumController.m */,
+			);
+			path = Album;
 			sourceTree = "<group>";
 		};
 		50BD3DFA2477E73F000251EA = {
@@ -167,14 +192,12 @@
 		50BD3E272477F449000251EA /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				50CE5D7B247A8785004DE8AB /* AppCell.h */,
+				50CE5D7C247A8785004DE8AB /* AppCell.m */,
 				50BD3E222477F41B000251EA /* SearchView.h */,
 				50BD3E232477F41B000251EA /* SearchView.m */,
 				50BD3E0C2477E73F000251EA /* SearchViewController.h */,
 				50BD3E0D2477E73F000251EA /* SearchViewController.m */,
-				50CE5D7E247BB2F0004DE8AB /* SearchTableViewController.h */,
-				50CE5D7F247BB2F0004DE8AB /* SearchTableViewController.m */,
-				50CE5D7B247A8785004DE8AB /* AppCell.h */,
-				50CE5D7C247A8785004DE8AB /* AppCell.m */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -195,6 +218,19 @@
 				50BD3E0A2477E73F000251EA /* SceneDelegate.m */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		50DC98D2247FDF4600F4D62D /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				5013BD62249A0ADC00B7F3F0 /* AppHeaderModel.h */,
+				5013BD63249A0ADC00B7F3F0 /* AppHeaderModel.m */,
+				50DC98D3247FDF8600F4D62D /* AppDetailHeaderView.h */,
+				50DC98D4247FDF8600F4D62D /* AppDetailHeaderView.m */,
+				50DC98D6247FDFB000F4D62D /* AppDetailHeaderController.h */,
+				50DC98D7247FDFB000F4D62D /* AppDetailHeaderController.m */,
+			);
+			path = Header;
 			sourceTree = "<group>";
 		};
 		A01FE92DEB8007B486B4FA7D /* Pods */ = {
@@ -319,19 +355,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				503BA0FF2479593A00BDD380 /* AppDetailView.m in Sources */,
-				503BA105247A546800BDD380 /* AppDetailViewController.m in Sources */,
+				503BA105247A546800BDD380 /* AppDetailController.m in Sources */,
 				50BD3E242477F41B000251EA /* SearchView.m in Sources */,
 				503BA10224795C9700BDD380 /* ImageDownloader.m in Sources */,
+				506FD97824823A74007CC9C0 /* AppDetailAlbumController.m in Sources */,
 				50BD3E0E2477E73F000251EA /* SearchViewController.m in Sources */,
 				50BD3E082477E73F000251EA /* AppDelegate.m in Sources */,
+				5013BD64249A0ADC00B7F3F0 /* AppHeaderModel.m in Sources */,
+				50DC98D8247FDFB000F4D62D /* AppDetailHeaderController.m in Sources */,
 				50BD3E192477E740000251EA /* main.m in Sources */,
 				50BD3E0B2477E73F000251EA /* SceneDelegate.m in Sources */,
+				50DC98D5247FDF8600F4D62D /* AppDetailHeaderView.m in Sources */,
+				506FD97E24825BE3007CC9C0 /* AppDetailAlbumCell.m in Sources */,
 				50BD3E212477EA66000251EA /* AppStartManager.m in Sources */,
-				50CE5D80247BB2F0004DE8AB /* SearchTableViewController.m in Sources */,
 				50CE5D7D247A8785004DE8AB /* AppCell.m in Sources */,
 				503BA0F22478FBA100BDD380 /* ITunesSearchService.m in Sources */,
 				503BA0FB247920ED00BDD380 /* iTunesApp.m in Sources */,
+				506FD97B24823AA8007CC9C0 /* AppDetailAlbumView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
