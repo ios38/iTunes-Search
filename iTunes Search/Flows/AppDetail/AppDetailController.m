@@ -40,7 +40,7 @@
 
 - (void)addAppDetailHeaderController {
     self.appDetailHeaderController = [[AppDetailHeaderController alloc] initWithApp:self.app andBlock:^{
-        NSLog(@"Hello, i'm a block!");
+        NSLog(@"Hello, i'm a block from AppDetail Controller!");
     }];
     [self addChildViewController:self.appDetailHeaderController];
     [self.view addSubview:self.appDetailHeaderController.view];

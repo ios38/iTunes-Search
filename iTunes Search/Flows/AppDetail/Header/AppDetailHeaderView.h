@@ -16,9 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) UILabel *appNameLabel;
 @property (strong, nonatomic) UILabel *appCompanyLabel;
 @property (strong, nonatomic) UIProgressView *progressView;
-@property (strong, nonatomic) UIButton *getAppButton;
-@property (strong, nonatomic) UIButton *stopAppButton;
-@property (strong, nonatomic) UIButton *openAppButton;
+@property (strong, nonatomic) UIButton *getButton;
+@property (strong, nonatomic) UIButton *stopButton;
+@property (strong, nonatomic) UIButton *openButton;
 
 @end
 

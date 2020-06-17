@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5013BD64249A0ADC00B7F3F0 /* AppHeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5013BD63249A0ADC00B7F3F0 /* AppHeaderModel.m */; };
 		503BA0F22478FBA100BDD380 /* ITunesSearchService.m in Sources */ = {isa = PBXBuildFile; fileRef = 503BA0F12478FBA100BDD380 /* ITunesSearchService.m */; };
 		503BA0FB247920ED00BDD380 /* iTunesApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 503BA0F9247920ED00BDD380 /* iTunesApp.m */; };
 		503BA10224795C9700BDD380 /* ImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 503BA10124795C9700BDD380 /* ImageDownloader.m */; };
@@ -31,6 +32,8 @@
 /* Begin PBXFileReference section */
 		0D7DCD6CC43FA719573B108D /* Pods-iTunes Search.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunes Search.debug.xcconfig"; path = "Target Support Files/Pods-iTunes Search/Pods-iTunes Search.debug.xcconfig"; sourceTree = "<group>"; };
 		27FEF72BD5312E15A8A6D441 /* Pods_iTunes_Search.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunes_Search.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5013BD62249A0ADC00B7F3F0 /* AppHeaderModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppHeaderModel.h; sourceTree = "<group>"; };
+		5013BD63249A0ADC00B7F3F0 /* AppHeaderModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppHeaderModel.m; sourceTree = "<group>"; };
 		503BA0F02478FBA100BDD380 /* ITunesSearchService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITunesSearchService.h; sourceTree = "<group>"; };
 		503BA0F12478FBA100BDD380 /* ITunesSearchService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITunesSearchService.m; sourceTree = "<group>"; };
 		503BA0F9247920ED00BDD380 /* iTunesApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iTunesApp.m; sourceTree = "<group>"; };
@@ -220,6 +223,8 @@
 		50DC98D2247FDF4600F4D62D /* Header */ = {
 			isa = PBXGroup;
 			children = (
+				5013BD62249A0ADC00B7F3F0 /* AppHeaderModel.h */,
+				5013BD63249A0ADC00B7F3F0 /* AppHeaderModel.m */,
 				50DC98D3247FDF8600F4D62D /* AppDetailHeaderView.h */,
 				50DC98D4247FDF8600F4D62D /* AppDetailHeaderView.m */,
 				50DC98D6247FDFB000F4D62D /* AppDetailHeaderController.h */,
@@ -356,6 +361,7 @@
 				506FD97824823A74007CC9C0 /* AppDetailAlbumController.m in Sources */,
 				50BD3E0E2477E73F000251EA /* SearchViewController.m in Sources */,
 				50BD3E082477E73F000251EA /* AppDelegate.m in Sources */,
+				5013BD64249A0ADC00B7F3F0 /* AppHeaderModel.m in Sources */,
 				50DC98D8247FDFB000F4D62D /* AppDetailHeaderController.m in Sources */,
 				50BD3E192477E740000251EA /* main.m in Sources */,
 				50BD3E0B2477E73F000251EA /* SceneDelegate.m in Sources */,

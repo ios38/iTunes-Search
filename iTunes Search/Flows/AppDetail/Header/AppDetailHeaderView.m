@@ -41,12 +41,29 @@
     self.progressView = UIProgressView.new;
     [self addSubview:self.progressView];
     
-    self.getAppButton = [[UIButton alloc] init];
-    [self.getAppButton setTitle:@"Get" forState:UIControlStateNormal];
-    self.getAppButton.titleLabel.font = [UIFont systemFontOfSize:16 weight:UIFontWeightMedium];
-    self.getAppButton.backgroundColor = [UIColor darkGrayColor];
-    self.getAppButton.layer.cornerRadius = 16;
-    [self addSubview:self.getAppButton];
+    self.getButton = [[UIButton alloc] init];
+    [self.getButton setTitle:@"Get" forState:UIControlStateNormal];
+    self.getButton.titleLabel.font = [UIFont systemFontOfSize:16 weight:UIFontWeightMedium];
+    self.getButton.backgroundColor = [UIColor systemBlueColor];
+    self.getButton.layer.cornerRadius = 16;
+    [self addSubview:self.getButton];
+    [self.getButton setHidden:YES];
+
+    self.stopButton = [[UIButton alloc] init];
+    [self.stopButton setTitle:@"Stop" forState:UIControlStateNormal];
+    self.stopButton.titleLabel.font = [UIFont systemFontOfSize:16 weight:UIFontWeightMedium];
+    self.stopButton.backgroundColor = [UIColor systemBlueColor];
+    self.stopButton.layer.cornerRadius = 16;
+    [self addSubview:self.stopButton];
+    [self.stopButton setHidden:YES];
+
+    self.openButton = [[UIButton alloc] init];
+    [self.openButton setTitle:@"Open" forState:UIControlStateNormal];
+    self.openButton.titleLabel.font = [UIFont systemFontOfSize:16 weight:UIFontWeightMedium];
+    self.openButton.backgroundColor = [UIColor systemBlueColor];
+    self.openButton.layer.cornerRadius = 16;
+    [self addSubview:self.openButton];
+    [self.openButton setHidden:YES];
 }
 
 - (void)setupConstraints {
@@ -61,7 +78,7 @@
         make.right.equalTo(self.mas_right);
     }];
     [self.appCompanyLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.appNameLabel.mas_bottom).with.offset(10);
+        make.top.equalTo(self.appNameLabel.mas_bottom).with.offset(7);
         //make.top.equalTo(self.mas_top).with.offset(30);
         make.left.equalTo(self.appIconImageView.mas_right).with.offset(20);
         make.right.equalTo(self.mas_right);
@@ -71,9 +88,21 @@
         make.left.equalTo(self.appIconImageView.right).with.offset(20);
         make.right.equalTo(self.right).with.inset(20);
     }];
-    [self.getAppButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.appIconImageView.mas_right).with.offset(20);
-        make.bottom.equalTo(self.appIconImageView.mas_bottom);
+    [self.getButton makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.appIconImageView.right).with.offset(20);
+        make.bottom.equalTo(self.appIconImageView.bottom);
+        make.width.mas_equalTo(60);
+        make.height.mas_equalTo(30);
+    }];
+    [self.stopButton makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.appIconImageView.right).with.offset(20);
+        make.bottom.equalTo(self.appIconImageView.bottom);
+        make.width.mas_equalTo(60);
+        make.height.mas_equalTo(30);
+    }];
+    [self.openButton makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.appIconImageView.right).with.offset(20);
+        make.bottom.equalTo(self.appIconImageView.bottom);
         make.width.mas_equalTo(60);
         make.height.mas_equalTo(30);
     }];

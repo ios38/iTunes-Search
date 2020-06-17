@@ -9,13 +9,15 @@
 #import "AppDetailHeaderController.h"
 #import "AppDetailHeaderView.h"
 #import <SDWebImage/SDWebImage.h>
-//#define MAS_SHORTHAND
-#import "Masonry.h"
+#import "AppHeaderModel.h"
+
 
 @interface AppDetailHeaderController ()
 
 @property (strong, nonatomic) AppDetailHeaderView *appDetailHeaderView;
 @property (strong, nonatomic) ITunesApp *app;
+
+@property (strong,nonatomic) id <AppHeaderModelInput, AppHeaderModelOutput> appHeaderModel;
 
 @end
 
@@ -48,13 +50,58 @@
     
     self.appDetailHeaderView.appNameLabel.text = self.app.appName;
     self.appDetailHeaderView.appCompanyLabel.text = self.app.company;
-
-    UITapGestureRecognizer *doubleTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(performBlock)];
-    [self.view addGestureRecognizer:doubleTapGesture];
-    doubleTapGesture.numberOfTapsRequired = 2;
-    //self.appDetailHeaderView.appNameLabel.userInteractionEnabled = YES;
     
-    [self.appDetailHeaderView.getAppButton addTarget:self action:@selector(performBlock) forControlEvents:UIControlEventTouchUpInside];
+    self.appHeaderModel = AppHeaderModel.new;
+    
+    __weak __typeof(self)weakSelf = self;
+    self.appHeaderModel.onProgressChanged = ^(double progress) {
+        [weakSelf.appDetailHeaderView.progressView setProgress:progress animated:NO];
+    };
+    self.appHeaderModel.progress = 0;
+
+    self.appHeaderModel.onStateChanged = ^(AppState appState) {
+        switch (appState) {
+            case readyToGet:
+                [weakSelf.appDetailHeaderView.getButton setHidden:NO];
+                [weakSelf.appDetailHeaderView.stopButton setHidden:YES];
+                [weakSelf.appDetailHeaderView.openButton setHidden:YES];
+                break;
+            case downloading:
+                [weakSelf.appDetailHeaderView.getButton setHidden:YES];
+                [weakSelf.appDetailHeaderView.stopButton setHidden:NO];
+                [weakSelf.appDetailHeaderView.openButton setHidden:YES];
+                break;
+            case readyToOpen:
+                [weakSelf.appDetailHeaderView.getButton setHidden:YES];
+                [weakSelf.appDetailHeaderView.stopButton setHidden:YES];
+                [weakSelf.appDetailHeaderView.openButton setHidden:NO];
+                break;
+        }
+    };
+    self.appHeaderModel.appState = readyToGet;
+    
+    [self.appDetailHeaderView.getButton addTarget:self action:@selector(getButtonTapped) forControlEvents:UIControlEventTouchUpInside];
+
+    [self.appDetailHeaderView.stopButton addTarget:self action:@selector(stopButtonTapped) forControlEvents:UIControlEventTouchUpInside];
+
+    [self.appDetailHeaderView.openButton addTarget:self action:@selector(openButtonTapped) forControlEvents:UIControlEventTouchUpInside];
+
+    //UITapGestureRecognizer *doubleTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(performBlock)];
+    //[self.view addGestureRecognizer:doubleTapGesture];
+    //doubleTapGesture.numberOfTapsRequired = 2;
+    //self.appDetailHeaderView.appNameLabel.userInteractionEnabled = YES;
+}
+
+- (void)getButtonTapped {
+    [self.appHeaderModel get];
+}
+
+- (void)stopButtonTapped {
+    [self.appHeaderModel stop];
+}
+
+- (void)openButtonTapped {
+    [self.appHeaderModel open];
 }
 
 - (void)performBlock {
