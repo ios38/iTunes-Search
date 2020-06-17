@@ -43,8 +43,8 @@
 }
 
 - (void)configureWithImageUrl:(NSString *)imageUrl {
-    [self.imageView sd_setImageWithURL:[NSURL URLWithString:imageUrl]
-    placeholderImage:[UIImage systemImageNamed:@"questionmark.circle"]];
+    [self.imageView sd_setImageWithURL:[NSURL URLWithString:imageUrl]];
+    //[self.imageView sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:[UIImage systemImageNamed:@"questionmark.circle"]];
     self.imageUrlLabel.text = imageUrl;
 }
 

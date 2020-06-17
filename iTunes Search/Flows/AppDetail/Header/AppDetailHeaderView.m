@@ -42,18 +42,24 @@
     [self addSubview:self.progressView];
     
     self.getButton = [[UIButton alloc] init];
-    [self.getButton setTitle:@"Get" forState:UIControlStateNormal];
-    self.getButton.titleLabel.font = [UIFont systemFontOfSize:16 weight:UIFontWeightMedium];
-    self.getButton.backgroundColor = [UIColor systemBlueColor];
-    self.getButton.layer.cornerRadius = 16;
+    self.getButton.imageView.tintColor = [UIColor systemBlueColor];
+    [self.getButton setImage:[UIImage systemImageNamed:@"icloud.and.arrow.down"] forState:UIControlStateNormal];
+    self.getButton.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    //[self.getButton setTitle:@"Get" forState:UIControlStateNormal];
+    //self.getButton.titleLabel.font = [UIFont systemFontOfSize:16 weight:UIFontWeightMedium];
+    //self.getButton.backgroundColor = [UIColor systemBlueColor];
+    //self.getButton.layer.cornerRadius = 16;
     [self addSubview:self.getButton];
-    [self.getButton setHidden:YES];
+    [self.getButton setHidden:NO];
 
     self.stopButton = [[UIButton alloc] init];
-    [self.stopButton setTitle:@"Stop" forState:UIControlStateNormal];
-    self.stopButton.titleLabel.font = [UIFont systemFontOfSize:16 weight:UIFontWeightMedium];
-    self.stopButton.backgroundColor = [UIColor systemBlueColor];
-    self.stopButton.layer.cornerRadius = 16;
+    self.stopButton.imageView.tintColor = [UIColor systemBlueColor];
+    [self.stopButton setImage:[UIImage systemImageNamed:@"stop.circle"] forState:UIControlStateNormal];
+    self.stopButton.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    //[self.stopButton setTitle:@"Stop" forState:UIControlStateNormal];
+    //self.stopButton.titleLabel.font = [UIFont systemFontOfSize:16 weight:UIFontWeightMedium];
+    //self.stopButton.backgroundColor = [UIColor systemBlueColor];
+    //self.stopButton.layer.cornerRadius = 16;
     [self addSubview:self.stopButton];
     [self.stopButton setHidden:YES];
 
@@ -91,14 +97,20 @@
     [self.getButton makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.appIconImageView.right).with.offset(20);
         make.bottom.equalTo(self.appIconImageView.bottom);
-        make.width.mas_equalTo(60);
+        make.width.mas_equalTo(40);
         make.height.mas_equalTo(30);
+    }];
+    [self.getButton.imageView makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.getButton);
     }];
     [self.stopButton makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.appIconImageView.right).with.offset(20);
         make.bottom.equalTo(self.appIconImageView.bottom);
-        make.width.mas_equalTo(60);
+        make.width.mas_equalTo(40);
         make.height.mas_equalTo(30);
+    }];
+    [self.stopButton.imageView makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.stopButton);
     }];
     [self.openButton makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.appIconImageView.right).with.offset(20);
